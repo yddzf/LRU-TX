@@ -6,4 +6,4 @@ Our LRU-TX test is based on I/O mode of testpmd. Please replace the folder testp
 
 The code in CPU version can run directly with a random dataset "udp.txt" in "Release Mode", which can show the throughput of LRU-TX.
 
-Besides, this repository also includes a part of ovs, it cannot compile unless it is put in the ovs directory. This repository was made only for convenient, to prevent cloning the entire ovs repo and load them to the code editor. Compilation environment is ubuntu 16.04 and openvswitch-2.10.2
+Besides, this repository also includes a part of ovs, it cannot compile unless it is put in the ovs directory. This repository was made only for convenient, to prevent cloning the entire ovs repo and load them to the code editor. Compilation environment is ubuntu 16.04 and openvswitch-2.10.2. The LRU-TX is integrated into the file datapath.c.
