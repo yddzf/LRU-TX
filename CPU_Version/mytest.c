@@ -85,12 +85,12 @@ void do_work_1(const int w) {
 void do_work(const int w) {
 
 	LRU_time = 0;
-	
+	printf("====================================================\n");
 	for (int i = 0; i<work_round; i++) {
 		do_work_1(w);
 	}
-	printf("====================================================\n");
-	printf("LRU_throughput is :%d\n",  (int)(LRU_time / work_round ) );
+	
+	printf("LRU_throughput is :%d pps\n",  (int)(LRU_time / work_round ) );
 }
 
 int main() {
