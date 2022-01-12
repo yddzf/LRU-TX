@@ -198,7 +198,7 @@ static void insertentryToHashMap(LRUCacheS *cache, cacheEntryS *entry)
 
 	cacheEntryS *n = cache->hashMap[hashKey(cache, entry->key)];
 	if (n != NULL) {
-		if (entry->hashList == NULL){
+		if (entry->hashListNext == NULL){
 			entry->hashListNext = n;
 			n->hashListPrev = entry;
 		}
