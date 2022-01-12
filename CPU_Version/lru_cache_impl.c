@@ -46,13 +46,13 @@ static int LRUCacheCreate(int capacity, void **lruCache)
 	}
 	memset(cache, 0, sizeof(*cache));
 	cache->cacheCapacity = capacity;
-	cache->hashMap = malloc(sizeof(cacheEntryS*)*capacity);
+	cache->hashMap = malloc(sizeof(cacheEntryS*)*capacity*1.2);
 	if (NULL == cache->hashMap) {
 		kfree(cache);
 		printf("error!\n");
 		return -1;
 	}
-	memset(cache->hashMap, 0, sizeof(cacheEntryS*)*capacity);
+	memset(cache->hashMap, 0, sizeof(cacheEntryS*)*capacity*1.2);
 
 	*lruCache = cache;
 	return 0;
